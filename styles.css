@@ -39,6 +39,13 @@ body {
   gap: 10px; /* spacing between buttons */
 }
 
+/* Dropdown container */
+.dropdown {
+  position: relative; /* important for positioning dropdown */
+  display: inline-block; /* allows multiple dropdowns in a row */
+}
+
+/* Nav buttons */
 .nav-link {
   background-color: #2776FF;
   color: #fff;
@@ -48,7 +55,7 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s;
-  position: relative; /* needed for dropdown positioning */
+  position: relative; /* still needed for hover effects */
 }
 
 .nav-link:hover {
@@ -61,18 +68,19 @@ body {
   display: none; /* hidden by default */
   margin: 5px 0;
   padding: 0;
-  position: absolute;
-  top: 100%; /* directly under button */
-  left: 50%;
-  transform: translateX(-50%);
+  position: absolute; /* positions relative to parent .dropdown */
+  top: 100%;           /* directly under the button */
+  left: 0;             /* align left edge of menu with button */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   min-width: 180px;
   text-align: left;
   z-index: 100;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
 }
 
+/* Dropdown links */
 .dropdown-menu li {
   padding: 5px 10px;
 }
@@ -88,6 +96,7 @@ body {
   border-radius: 3px;
 }
 
+/* Show dropdown */
 .show {
   display: block;
 }
