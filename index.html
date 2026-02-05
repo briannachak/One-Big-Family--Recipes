@@ -3,74 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <title>One Big Family Recipes</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
+      background-color: #2776FF;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
       margin: 0;
-      font-family: sans-serif;
-      background-color: #2776FF; /* dark blue */
-      color: white;
+      padding: 0;
+      text-align: center;
     }
 
     .site-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem;
-      background-color: #2776FF;
-      flex-wrap: wrap;
+      padding: 20px;
+      background-color: #1a4cb1;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
     .brand {
-      font-weight: bold;
-      font-size: 1.5rem;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
     .nav {
       display: flex;
-      gap: 1rem;
+      justify-content: center;
       flex-wrap: wrap;
-      position: relative;
+      gap: 15px;
     }
 
-    .dropdown {
-      position: relative;
-    }
-
-    .dropbtn {
-      background: none;
+    .nav .dropbtn {
+      background-color: #fff8e1;
+      color: #000;
+      padding: 10px 20px;
+      font-size: 16px;
       border: none;
-      color: white;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: background 0.3s;
+    }
+
+    .nav .dropbtn:hover {
+      background-color: #ffd54f;
     }
 
     .dropdown-menu {
       display: none;
       position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      color: black;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      background-color: #fff8e1;
       min-width: 160px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      margin-top: 5px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       z-index: 100;
-      max-height: 400px;
-      overflow-y: auto;
+      text-align: left;
+    }
+
+    .dropdown-menu li {
+      list-style: none;
     }
 
     .dropdown-menu li a {
-      display: block;
-      padding: 0.5rem 1rem;
+      color: #000;
       text-decoration: none;
-      color: black;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background 0.2s;
     }
 
     .dropdown-menu li a:hover {
-      background-color: #ddd;
+      background-color: #ffd54f;
     }
 
     .show {
@@ -78,26 +86,32 @@
     }
 
     .home-content {
-      text-align: center;
-      padding: 5rem 2rem;
-      background-color: #F5F5DC; /* cream for content */
-      color: black;
-      min-height: calc(100vh - 70px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      background-color: #fff8e1;
+      color: #000;
+      display: inline-block;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin: 50px auto;
+      max-width: 800px;
     }
 
     .home-content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 36px;
+      margin-bottom: 15px;
     }
 
-    .home-content p {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0.5rem auto;
+    .home-content hr {
+      border: 0;
+      height: 2px;
+      background: #2776FF;
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
     }
   </style>
 </head>
@@ -106,10 +120,11 @@
   <header class="site-header">
     <div class="brand">One Big Family Recipes</div>
     <nav class="nav">
+      
       <!-- ASIA -->
       <div class="dropdown">
-        <button class="dropbtn" id="asiaBtn">Asia ▾</button>
-        <ul class="dropdown-menu" id="asiaMenu">
+        <button class="dropbtn">🌏 Asia ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="asia/afghanistan/">Afghanistan</a></li>
           <li><a href="asia/armenia/">Armenia</a></li>
           <li><a href="asia/azerbaijan/">Azerbaijan</a></li>
@@ -152,7 +167,6 @@
           <li><a href="asia/taiwan/">Taiwan</a></li>
           <li><a href="asia/tajikistan/">Tajikistan</a></li>
           <li><a href="asia/thailand/">Thailand</a></li>
-          <li><a href="asia/timor-leste/">Timor-Leste</a></li>
           <li><a href="asia/turkey/">Turkey</a></li>
           <li><a href="asia/turkmenistan/">Turkmenistan</a></li>
           <li><a href="asia/uae/">United Arab Emirates</a></li>
@@ -164,14 +178,14 @@
 
       <!-- EUROPE -->
       <div class="dropdown">
-        <button class="dropbtn" id="euBtn">Europe ▾</button>
-        <ul class="dropdown-menu" id="euMenu">
+        <button class="dropbtn">🌍 Europe ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="europe/albania/">Albania</a></li>
           <li><a href="europe/andorra/">Andorra</a></li>
           <li><a href="europe/austria/">Austria</a></li>
           <li><a href="europe/belarus/">Belarus</a></li>
           <li><a href="europe/belgium/">Belgium</a></li>
-          <li><a href="europe/bosnia-herzegovina/">Bosnia and Herzegovina</a></li>
+          <li><a href="europe/bosnia-herzegovina/">Bosnia & Herzegovina</a></li>
           <li><a href="europe/bulgaria/">Bulgaria</a></li>
           <li><a href="europe/croatia/">Croatia</a></li>
           <li><a href="europe/czech-republic/">Czech Republic</a></li>
@@ -193,6 +207,7 @@
           <li><a href="europe/monaco/">Monaco</a></li>
           <li><a href="europe/montenegro/">Montenegro</a></li>
           <li><a href="europe/netherlands/">Netherlands</a></li>
+          <li><a href="europe/north-macedonia/">North Macedonia</a></li>
           <li><a href="europe/norway/">Norway</a></li>
           <li><a href="europe/poland/">Poland</a></li>
           <li><a href="europe/portugal/">Portugal</a></li>
@@ -211,25 +226,30 @@
 
       <!-- NORTH AMERICA -->
       <div class="dropdown">
-        <button class="dropbtn" id="naBtn">North America ▾</button>
-        <ul class="dropdown-menu" id="naMenu">
+        <button class="dropbtn">🌎 North America ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="north-america/usa/">United States</a></li>
           <li><a href="north-america/canada/">Canada</a></li>
           <li><a href="north-america/mexico/">Mexico</a></li>
           <li><a href="north-america/guatemala/">Guatemala</a></li>
           <li><a href="north-america/belize/">Belize</a></li>
+          <li><a href="north-america/honduras/">Honduras</a></li>
+          <li><a href="north-america/el-salvador/">El Salvador</a></li>
+          <li><a href="north-america/nicaragua/">Nicaragua</a></li>
           <li><a href="north-america/costa-rica/">Costa Rica</a></li>
           <li><a href="north-america/panama/">Panama</a></li>
           <li><a href="north-america/bahamas/">Bahamas</a></li>
           <li><a href="north-america/cuba/">Cuba</a></li>
           <li><a href="north-america/jamaica/">Jamaica</a></li>
+          <li><a href="north-america/haiti/">Haiti</a></li>
+          <li><a href="north-america/dominican-republic/">Dominican Republic</a></li>
         </ul>
       </div>
 
       <!-- SOUTH AMERICA -->
       <div class="dropdown">
-        <button class="dropbtn" id="saBtn">South America ▾</button>
-        <ul class="dropdown-menu" id="saMenu">
+        <button class="dropbtn">🌏 South America ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="south-america/argentina/">Argentina</a></li>
           <li><a href="south-america/bolivia/">Bolivia</a></li>
           <li><a href="south-america/brazil/">Brazil</a></li>
@@ -242,30 +262,29 @@
           <li><a href="south-america/suriname/">Suriname</a></li>
           <li><a href="south-america/uruguay/">Uruguay</a></li>
           <li><a href="south-america/venezuela/">Venezuela</a></li>
-          <li><a href="south-america/bolivia/">Bolivia</a></li>
         </ul>
       </div>
 
       <!-- OCEANIA -->
       <div class="dropdown">
-        <button class="dropbtn" id="oceaniaBtn">Oceania ▾</button>
-        <ul class="dropdown-menu" id="oceaniaMenu">
+        <button class="dropbtn">🌏 Oceania ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="oceania/australia/">Australia</a></li>
           <li><a href="oceania/new-zealand/">New Zealand</a></li>
           <li><a href="oceania/fiji/">Fiji</a></li>
           <li><a href="oceania/papua-new-guinea/">Papua New Guinea</a></li>
           <li><a href="oceania/samoa/">Samoa</a></li>
           <li><a href="oceania/tonga/">Tonga</a></li>
+          <li><a href="oceania/vanuatu/">Vanuatu</a></li>
         </ul>
       </div>
 
       <!-- AFRICA -->
       <div class="dropdown">
-        <button class="dropbtn" id="africaBtn">Africa ▾</button>
-        <ul class="dropdown-menu" id="africaMenu">
+        <button class="dropbtn">🌍 Africa ▾</button>
+        <ul class="dropdown-menu">
           <li><a href="africa/algeria/">Algeria</a></li>
           <li><a href="africa/angola/">Angola</a></li>
-          <li><a href="africa/benin/">Benin</a></li>
           <li><a href="africa/botswana/">Botswana</a></li>
           <li><a href="africa/burkina-faso/">Burkina Faso</a></li>
           <li><a href="africa/burundi/">Burundi</a></li>
@@ -275,7 +294,8 @@
           <li><a href="africa/chad/">Chad</a></li>
           <li><a href="africa/comoros/">Comoros</a></li>
           <li><a href="africa/congo/">Congo</a></li>
-          <li><a href="africa/democratic-republic-congo/">DR Congo</a></li>
+          <li><a href="africa/democratic-republic-congo/">Democratic Republic of the Congo</a></li>
+          <li><a href="africa/djibouti/">Djibouti</a></li>
           <li><a href="africa/egypt/">Egypt</a></li>
           <li><a href="africa/equatorial-guinea/">Equatorial Guinea</a></li>
           <li><a href="africa/eritrea/">Eritrea</a></li>
@@ -300,7 +320,7 @@
           <li><a href="africa/niger/">Niger</a></li>
           <li><a href="africa/nigeria/">Nigeria</a></li>
           <li><a href="africa/rwanda/">Rwanda</a></li>
-          <li><a href="africa/sao-tome-principe/">São Tomé & Príncipe</a></li>
+          <li><a href="africa/sao-tome-principe/">Sao Tome & Principe</a></li>
           <li><a href="africa/senegal/">Senegal</a></li>
           <li><a href="africa/seychelles/">Seychelles</a></li>
           <li><a href="africa/sierra-leone/">Sierra Leone</a></li>
@@ -316,12 +336,13 @@
           <li><a href="africa/zimbabwe/">Zimbabwe</a></li>
         </ul>
       </div>
+
     </nav>
   </header>
 
-  <!-- CENTERED HOME CONTENT -->
   <main class="home-content">
     <h1>Welcome to One Big Family Recipes</h1>
+    <hr>
     <p>
       This website is a collection of family recipes from all corners of the world. 
       Our goal is to preserve food traditions and share stories across generations. 
@@ -332,7 +353,6 @@
   </main>
 
   <script>
-    // Dropdown functionality
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(drop => {
@@ -341,7 +361,6 @@
 
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        // Close other dropdowns
         document.querySelectorAll('.dropdown-menu').forEach(m => {
           if (m !== menu) m.classList.remove('show');
         });
@@ -356,5 +375,4 @@
 
 </body>
 </html>
-
 
