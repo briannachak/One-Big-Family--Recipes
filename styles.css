@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #fdf5e6; /* Cream background */
+  background-color: #f5e1c0; /* Darker cream/biscuit */
   color: #333;
 }
 
@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fdf5e6; /* Match cream background */
+  background-color: #f5e1c0; /* Match darker cream */
   padding: 15px 30px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   position: sticky;
@@ -44,7 +44,7 @@ body {
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #fdf5e6; /* Cream background for dropdown too */
+  background-color: #f5e1c0; /* Darker cream for dropdowns too */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   list-style: none;
   margin: 0;
@@ -54,7 +54,7 @@ body {
 }
 
 .dropdown-menu li {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e0cfa8;
 }
 
 .dropdown-menu li:last-child {
@@ -69,7 +69,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-  background-color: #f2e8dc; /* Slightly darker cream on hover */
+  background-color: #e8cfa2; /* Slightly darker on hover */
 }
 
 /* Show dropdown */
