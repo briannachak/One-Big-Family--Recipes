@@ -1,0 +1,46 @@
+/* === Global Styles === */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff8f0; /* soft cream background */
+  color: #333;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* === Headings === */
+h1 {
+  color: #d35400; /* burnt orange */
+  text-align: center;
+}
+h2 {
+  color: #e67e22;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 5px;
+}
+h3 {
+  color: #f39c12;
+}
+
+/* === Links === */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* === Lists === */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 5px;
+}
+
+/* === Recipe Box Styling === */
+body > h1 + p, body > h2, body > ul, body > ol {
+  margin-top: 20px;
+}
