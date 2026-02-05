@@ -3,258 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <title>One Big Family Recipes</title>
-  <link rel="stylesheet" href="styles.css?v=2">
-  <style>
-    /* Simple dropdown styling */
-    .nav { display: flex; gap: 10px; position: relative; }
-    .nav .dropbtn { cursor: pointer; padding: 8px 12px; }
-    .dropdown-menu { display: none; position: absolute; background: white; list-style: none; margin: 0; padding: 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    .dropdown-menu li { padding: 8px 12px; }
-    .dropdown-menu li a { text-decoration: none; color: black; display: block; }
-    .dropdown-menu.show { display: block; }
-    .site-header { padding: 10px; background-color: #f0f0f0; }
-    .brand { font-weight: bold; font-size: 1.2em; margin-bottom: 5px; }
-  </style>
+  <link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
-
-  <!-- Header -->
   <header class="site-header">
     <div class="brand">One Big Family Recipes</div>
-
     <nav class="nav">
-    <!-- Asia Dropdown -->
-<button class="nav-link dropbtn" type="button" id="asiaBtn" aria-expanded="false"> Asia ▾</button>
-<ul class="dropdown-menu" id="asiaMenu">
-  <li><a class="dropdown-link" href="asia/afghanistan/">Afghanistan</a></li>
-  <li><a class="dropdown-link" href="asia/armenia/">Armenia</a></li>
-  <li><a class="dropdown-link" href="asia/azerbaijan/">Azerbaijan</a></li>
-  <li><a class="dropdown-link" href="asia/bahrain/">Bahrain</a></li>
-  <li><a class="dropdown-link" href="asia/bangladesh/">Bangladesh</a></li>
-  <li><a class="dropdown-link" href="asia/bhutan/">Bhutan</a></li>
-  <li><a class="dropdown-link" href="asia/brunei/">Brunei</a></li>
-  <li><a class="dropdown-link" href="asia/cambodia/">Cambodia</a></li>
-  <li><a class="dropdown-link" href="asia/china/">China</a></li>
-  <li><a class="dropdown-link" href="asia/cyprus/">Cyprus</a></li>
-  <li><a class="dropdown-link" href="asia/georgia/">Georgia</a></li>
-  <li><a class="dropdown-link" href="asia/india/">India</a></li>
-  <li><a class="dropdown-link" href="asia/indonesia/">Indonesia</a></li>
-  <li><a class="dropdown-link" href="asia/iran/">Iran</a></li>
-  <li><a class="dropdown-link" href="asia/iraq/">Iraq</a></li>
-  <li><a class="dropdown-link" href="asia/israel/">Israel</a></li>
-  <li><a class="dropdown-link" href="asia/japan/">Japan</a></li>
-  <li><a class="dropdown-link" href="asia/jordan/">Jordan</a></li>
-  <li><a class="dropdown-link" href="asia/kazakhstan/">Kazakhstan</a></li>
-  <li><a class="dropdown-link" href="asia/kuwait/">Kuwait</a></li>
-  <li><a class="dropdown-link" href="asia/kyrgyzstan/">Kyrgyzstan</a></li>
-  <li><a class="dropdown-link" href="asia/laos/">Laos</a></li>
-  <li><a class="dropdown-link" href="asia/lebanon/">Lebanon</a></li>
-  <li><a class="dropdown-link" href="asia/malaysia/">Malaysia</a></li>
-  <li><a class="dropdown-link" href="asia/maldives/">Maldives</a></li>
-  <li><a class="dropdown-link" href="asia/mongolia/">Mongolia</a></li>
-  <li><a class="dropdown-link" href="asia/myanmar/">Myanmar</a></li>
-  <li><a class="dropdown-link" href="asia/nepal/">Nepal</a></li>
-  <li><a class="dropdown-link" href="asia/north-korea/">North Korea</a></li>
-  <li><a class="dropdown-link" href="asia/oman/">Oman</a></li>
-  <li><a class="dropdown-link" href="asia/pakistan/">Pakistan</a></li>
-  <li><a class="dropdown-link" href="asia/palestine/">Palestine</a></li>
-  <li><a class="dropdown-link" href="asia/philippines/">Philippines</a></li>
-  <li><a class="dropdown-link" href="asia/qatar/">Qatar</a></li>
-  <li><a class="dropdown-link" href="asia/saudi-arabia/">Saudi Arabia</a></li>
-  <li><a class="dropdown-link" href="asia/singapore/">Singapore</a></li>
-  <li><a class="dropdown-link" href="asia/south-korea/">South Korea</a></li>
-  <li><a class="dropdown-link" href="asia/sri-lanka/">Sri Lanka</a></li>
-  <li><a class="dropdown-link" href="asia/syria/">Syria</a></li>
-  <li><a class="dropdown-link" href="asia/taiwan/">Taiwan</a></li>
-  <li><a class="dropdown-link" href="asia/tajikistan/">Tajikistan</a></li>
-  <li><a class="dropdown-link" href="asia/thailand/">Thailand</a></li>
-  <li><a class="dropdown-link" href="asia/timor-leste/">Timor-Leste</a></li>
-  <li><a class="dropdown-link" href="asia/turkey/">Turkey</a></li>
-  <li><a class="dropdown-link" href="asia/turkmenistan/">Turkmenistan</a></li>
-  <li><a class="dropdown-link" href="asia/uae/">United Arab Emirates</a></li>
-  <li><a class="dropdown-link" href="asia/uzbekistan/">Uzbekistan</a></li>
-  <li><a class="dropdown-link" href="asia/vietnam/">Vietnam</a></li>
-  <li><a class="dropdown-link" href="asia/yemen/">Yemen</a></li>
-</ul>
+      <button class="nav-link dropbtn" type="button" id="asiaBtn" aria-expanded="false">Asia ▾</button>
+      <ul class="dropdown-menu" id="asiaMenu">
+        <li><a class="dropdown-link" href="asia/afghanistan/">Afghanistan</a></li>
+        <li><a class="dropdown-link" href="asia/china/">China</a></li>
+        <li><a class="dropdown-link" href="asia/india/">India</a></li>
+        <li><a class="dropdown-link" href="asia/japan/">Japan</a></li>
+        <li><a class="dropdown-link" href="asia/thailand/">Thailand</a></li>
+        <!-- Add the rest of Asia countries here -->
+      </ul>
 
+      <button class="nav-link dropbtn" type="button" id="euBtn" aria-expanded="false">Europe ▾</button>
+      <ul class="dropdown-menu" id="euMenu">
+        <li><a class="dropdown-link" href="europe/france/">France</a></li>
+        <li><a class="dropdown-link" href="europe/italy/">Italy</a></li>
+        <!-- Add the rest of Europe countries here -->
+      </ul>
 
-      <!-- North America Dropdown -->
       <button class="nav-link dropbtn" type="button" id="naBtn" aria-expanded="false">North America ▾</button>
       <ul class="dropdown-menu" id="naMenu">
         <li><a class="dropdown-link" href="north-america/usa/">United States</a></li>
         <li><a class="dropdown-link" href="north-america/canada/">Canada</a></li>
-        <li><a class="dropdown-link" href="north-america/mexico/">Mexico</a></li>
+        <!-- Add the rest of North America countries here -->
       </ul>
 
-        <!-- South America America Dropdown -->
       <button class="nav-link dropbtn" type="button" id="saBtn" aria-expanded="false">South America ▾</button>
       <ul class="dropdown-menu" id="saMenu">
-        <li><a class="dropdown-link" href="south-america/argentina/">Argentina</a></li>
-        <li><a class="dropdown-link" href="south-america/bolivia/">Bolivia</a></li>
         <li><a class="dropdown-link" href="south-america/brazil/">Brazil</a></li>
-        <li><a class="dropdown-link" href="south-america/Chile/">Chile</a></li>
-        <li><a class="dropdown-link" href="south-america/Colombia/">Colombia</a></li>
-        <li><a class="dropdown-link" href="south-america/Ecuador/">Ecuador</a></li>
-        <li><a class="dropdown-link" href="south-america/Guyana/">Guyana</a></li>
-        <li><a class="dropdown-link" href="south-america/Paraguay/">Paraguay</a></li>
-        <li><a class="dropdown-link" href="south-america/Peru/">Peru</a></li>
-        <li><a class="dropdown-link" href="south-america/Suriname/">Suriname</a></li>
-        <li><a class="dropdown-link" href="south-america/Uruguay/">Uruguay</a></li>
-        <li><a class="dropdown-link" href="south-america/Venezuela/">Venezuela</a></li>
-         </ul>
-        
+        <li><a class="dropdown-link" href="south-america/argentina/">Argentina</a></li>
+        <!-- Add the rest of South America countries here -->
+      </ul>
 
-     <!-- Europe Dropdown -->
-   <button class="nav-link dropbtn" type="button" id="euBtn" aria-expanded="false">Europe ▾</button>
-   <ul class="dropdown-menu" id="euMenu">
-    <li><a class="dropdown-link" href="europe/albania/">Albania</a></li>
-    <li><a class="dropdown-link" href="europe/andorra/">Andorra</a></li>
-    <li><a class="dropdown-link" href="europe/austria/">Austria</a></li>
-    <li><a class="dropdown-link" href="europe/belarus/">Belarus</a></li>
-    <li><a class="dropdown-link" href="europe/belgium/">Belgium</a></li>
-    <li><a class="dropdown-link" href="europe/bosnia-and-herzegovina/">Bosnia & Herzegovina</a></li>
-    <li><a class="dropdown-link" href="europe/bulgaria/">Bulgaria</a></li>
-    <li><a class="dropdown-link" href="europe/croatia/">Croatia</a></li>
-    <li><a class="dropdown-link" href="europe/czech-republic/">Czech Republic</a></li>
-    <li><a class="dropdown-link" href="europe/denmark/">Denmark</a></li>
-    <li><a class="dropdown-link" href="europe/estonia/">Estonia</a></li>
-    <li><a class="dropdown-link" href="europe/finland/">Finland</a></li>
-    <li><a class="dropdown-link" href="europe/france/">France</a></li>
-    <li><a class="dropdown-link" href="europe/germany/">Germany</a></li>
-    <li><a class="dropdown-link" href="europe/greece/">Greece</a></li>
-    <li><a class="dropdown-link" href="europe/hungary/">Hungary</a></li>
-    <li><a class="dropdown-link" href="europe/iceland/">Iceland</a></li>
-    <li><a class="dropdown-link" href="europe/ireland/">Ireland</a></li>
-    <li><a class="dropdown-link" href="europe/italy/">Italy</a></li>
-    <li><a class="dropdown-link" href="europe/kosovo/">Kosovo</a></li>
-    <li><a class="dropdown-link" href="europe/latvia/">Latvia</a></li>
-    <li><a class="dropdown-link" href="europe/liechtenstein/">Liechtenstein</a></li>
-    <li><a class="dropdown-link" href="europe/lithuania/">Lithuania</a></li>
-    <li><a class="dropdown-link" href="europe/luxembourg/">Luxembourg</a></li>
-    <li><a class="dropdown-link" href="europe/malta/">Malta</a></li>
-    <li><a class="dropdown-link" href="europe/moldova/">Moldova</a></li>
-    <li><a class="dropdown-link" href="europe/monaco/">Monaco</a></li>
-    <li><a class="dropdown-link" href="europe/montenegro/">Montenegro</a></li>
-    <li><a class="dropdown-link" href="europe/netherlands/">Netherlands</a></li>
-    <li><a class="dropdown-link" href="europe/north-macedonia/">North Macedonia</a></li>
-    <li><a class="dropdown-link" href="europe/norway/">Norway</a></li>
-    <li><a class="dropdown-link" href="europe/poland/">Poland</a></li>
-    <li><a class="dropdown-link" href="europe/portugal/">Portugal</a></li>
-    <li><a class="dropdown-link" href="europe/romania/">Romania</a></li>
-    <li><a class="dropdown-link" href="europe/russia/">Russia</a></li>
-    <li><a class="dropdown-link" href="europe/san-marino/">San Marino</a></li>
-    <li><a class="dropdown-link" href="europe/serbia/">Serbia</a></li>
-    <li><a class="dropdown-link" href="europe/slovakia/">Slovakia</a></li>
-    <li><a class="dropdown-link" href="europe/slovenia/">Slovenia</a></li>
-    <li><a class="dropdown-link" href="europe/spain/">Spain</a></li>
-    <li><a class="dropdown-link" href="europe/sweden/">Sweden</a></li>
-    <li><a class="dropdown-link" href="europe/switzerland/">Switzerland</a></li>
-    <li><a class="dropdown-link" href="europe/ukraine/">Ukraine</a></li>
-    <li><a class="dropdown-link" href="europe/united-kingdom/">United Kingdom</a></li>
-    <li><a class="dropdown-link" href="europe/vatican-city/">Vatican City</a></li>
-</ul>
-      <!-- Oceania Dropdown -->
-<button class="nav-link dropbtn" type="button" id="oceaniaBtn" aria-expanded="false"> Oceania ▾</button>
-<ul class="dropdown-menu" id="oceaniaMenu">
-  <li><a class="dropdown-link" href="oceania/australia/">Australia</a></li>
-  <li><a class="dropdown-link" href="oceania/fiji/">Fiji</a></li>
-  <li><a class="dropdown-link" href="oceania/kiribati/">Kiribati</a></li>
-  <li><a class="dropdown-link" href="oceania/marshall-islands/">Marshall Islands</a></li>
-  <li><a class="dropdown-link" href="oceania/micronesia/">Micronesia</a></li>
-  <li><a class="dropdown-link" href="oceania/nauru/">Nauru</a></li>
-  <li><a class="dropdown-link" href="oceania/new-zealand/">New Zealand</a></li>
-  <li><a class="dropdown-link" href="oceania/palau/">Palau</a></li>
-  <li><a class="dropdown-link" href="oceania/papua-new-guinea/">Papua New Guinea</a></li>
-  <li><a class="dropdown-link" href="oceania/samoa/">Samoa</a></li>
-  <li><a class="dropdown-link" href="oceania/solomon-islands/">Solomon Islands</a></li>
-  <li><a class="dropdown-link" href="oceania/tonga/">Tonga</a></li>
-  <li><a class="dropdown-link" href="oceania/tuvalu/">Tuvalu</a></li>
-  <li><a class="dropdown-link" href="oceania/vanuatu/">Vanuatu</a></li>
-  <li><a class="dropdown-link" href="oceania/federated-states-of-micronesia/">Federated States of Micronesia</a></li>
-</ul>
-      <!-- Africa Dropdown -->
-<button class="nav-link dropbtn" type="button" id="africaBtn" aria-expanded="false">Africa ▾</button>
-<ul class="dropdown-menu" id="africaMenu">
-  <li><a class="dropdown-link" href="africa/algeria/">Algeria</a></li>
-  <li><a class="dropdown-link" href="africa/angola/">Angola</a></li>
-  <li><a class="dropdown-link" href="africa/benin/">Benin</a></li>
-  <li><a class="dropdown-link" href="africa/botswana/">Botswana</a></li>
-  <li><a class="dropdown-link" href="africa/burkina-faso/">Burkina Faso</a></li>
-  <li><a class="dropdown-link" href="africa/burundi/">Burundi</a></li>
-  <li><a class="dropdown-link" href="africa/cabo-verde/">Cabo Verde</a></li>
-  <li><a class="dropdown-link" href="africa/cameroon/">Cameroon</a></li>
-  <li><a class="dropdown-link" href="africa/central-african-republic/">Central African Republic</a></li>
-  <li><a class="dropdown-link" href="africa/chad/">Chad</a></li>
-  <li><a class="dropdown-link" href="africa/ Comoros/">Comoros</a></li>
-  <li><a class="dropdown-link" href="africa/congo-brazzaville/">Congo (Brazzaville)</a></li>
-  <li><a class="dropdown-link" href="africa/congo-kinshasa/">Congo (Kinshasa)</a></li>
-  <li><a class="dropdown-link" href="africa/cote-d-ivoire/">Côte d'Ivoire</a></li>
-  <li><a class="dropdown-link" href="africa/djibouti/">Djibouti</a></li>
-  <li><a class="dropdown-link" href="africa/egypt/">Egypt</a></li>
-  <li><a class="dropdown-link" href="africa/equatorial-guinea/">Equatorial Guinea</a></li>
-  <li><a class="dropdown-link" href="africa/eritrea/">Eritrea</a></li>
-  <li><a class="dropdown-link" href="africa/eswatini/">Eswatini</a></li>
-  <li><a class="dropdown-link" href="africa/ethiopia/">Ethiopia</a></li>
-  <li><a class="dropdown-link" href="africa/gabon/">Gabon</a></li>
-  <li><a class="dropdown-link" href="africa/gambia/">Gambia</a></li>
-  <li><a class="dropdown-link" href="africa/ghana/">Ghana</a></li>
-  <li><a class="dropdown-link" href="africa/guinea/">Guinea</a></li>
-  <li><a class="dropdown-link" href="africa/guinea-bissau/">Guinea-Bissau</a></li>
-  <li><a class="dropdown-link" href="africa/kenya/">Kenya</a></li>
-  <li><a class="dropdown-link" href="africa/lesotho/">Lesotho</a></li>
-  <li><a class="dropdown-link" href="africa/liberia/">Liberia</a></li>
-  <li><a class="dropdown-link" href="africa/libya/">Libya</a></li>
-  <li><a class="dropdown-link" href="africa/madagascar/">Madagascar</a></li>
-  <li><a class="dropdown-link" href="africa/malawi/">Malawi</a></li>
-  <li><a class="dropdown-link" href="africa/mali/">Mali</a></li>
-  <li><a class="dropdown-link" href="africa/mauritania/">Mauritania</a></li>
-  <li><a class="dropdown-link" href="africa/mauritius/">Mauritius</a></li>
-  <li><a class="dropdown-link" href="africa/morocco/">Morocco</a></li>
-  <li><a class="dropdown-link" href="africa/mozambique/">Mozambique</a></li>
-  <li><a class="dropdown-link" href="africa/namibia/">Namibia</a></li>
-  <li><a class="dropdown-link" href="africa/niger/">Niger</a></li>
-  <li><a class="dropdown-link" href="africa/nigeria/">Nigeria</a></li>
-  <li><a class="dropdown-link" href="africa/rwanda/">Rwanda</a></li>
-  <li><a class="dropdown-link" href="africa/sao-tome-and-principe/">São Tomé & Príncipe</a></li>
-  <li><a class="dropdown-link" href="africa/senegal/">Senegal</a></li>
-  <li><a class="dropdown-link" href="africa/seychelles/">Seychelles</a></li>
-  <li><a class="dropdown-link" href="africa/sierra-leone/">Sierra Leone</a></li>
-  <li><a class="dropdown-link" href="africa/somalia/">Somalia</a></li>
-  <li><a class="dropdown-link" href="africa/south-africa/">South Africa</a></li>
-  <li><a class="dropdown-link" href="africa/south-sudan/">South Sudan</a></li>
-  <li><a class="dropdown-link" href="africa/sudan/">Sudan</a></li>
-  <li><a class="dropdown-link" href="africa/tanzania/">Tanzania</a></li>
-  <li><a class="dropdown-link" href="africa/togo/">Togo</a></li>
-  <li><a class="dropdown-link" href="africa/tunisia/">Tunisia</a></li>
-  <li><a class="dropdown-link" href="africa/uganda/">Uganda</a></li>
-  <li><a class="dropdown-link" href="africa/zambia/">Zambia</a></li>
-  <li><a class="dropdown-link" href="africa/zimbabwe/">Zimbabwe</a></li>
-</ul>
+      <button class="nav-link dropbtn" type="button" id="oceaniaBtn" aria-expanded="false">Oceania ▾</button>
+      <ul class="dropdown-menu" id="oceaniaMenu">
+        <li><a class="dropdown-link" href="oceania/australia/">Australia</a></li>
+        <li><a class="dropdown-link" href="oceania/new-zealand/">New Zealand</a></li>
+      </ul>
 
-
-
-        
-     
+      <button class="nav-link dropbtn" type="button" id="africaBtn" aria-expanded="false">Africa ▾</button>
+      <ul class="dropdown-menu" id="africaMenu">
+        <li><a class="dropdown-link" href="africa/egypt/">Egypt</a></li>
+        <li><a class="dropdown-link" href="africa/south-africa/">South Africa</a></li>
+        <!-- Add the rest of Africa countries here -->
       </ul>
     </nav>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>One Big Family Recipes</h1>
+  <main class="home-content">
+    <h1>Welcome to One Big Family Recipes</h1>
     <p>
-      A public collection of family recipes shared to preserve food traditions across generations.
+      This website is a collection of family recipes from all corners of the world. 
+      Our goal is to preserve food traditions and share stories across generations. 
+      Each recipe tells a story, passed down through families, cultures, and time. 
+      Explore, cook, and connect with flavors from every continent.
     </p>
-
-    <h2>All Recipes</h2>
-    <ul>
-      <li><a href="asia/laos/papaya-salad.html">Lao Papaya Salad (Tum Mak Hoong)</a></li>
-    </ul>
-
-    <p>Want to contribute a recipe? Submissions opening soon.</p>
+    <p>Click a continent above to start exploring recipes!</p>
   </main>
 
-  <!-- Dropdown JS -->
   <script>
     function setupDropdown(buttonId, menuId) {
       const btn = document.getElementById(buttonId);
@@ -273,15 +84,12 @@
     }
 
     setupDropdown("asiaBtn", "asiaMenu");
+    setupDropdown("euBtn", "euMenu");
     setupDropdown("naBtn", "naMenu");
     setupDropdown("saBtn", "saMenu");
-    setupDropdown("euBtn", "euMenu");
     setupDropdown("oceaniaBtn", "oceaniaMenu");
     setupDropdown("africaBtn", "africaMenu");
-
-
-
-
   </script>
 </body>
 </html>
+
