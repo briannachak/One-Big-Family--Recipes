@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f5e1c0; /* Darker cream/biscuit */
-  color: #333;
+  background-color: #3e2f2f; /* Super dark brown */
+  color: #f5f5dc; /* Light cream text for contrast */
 }
 
 /* Header */
@@ -11,9 +11,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #f5e1c0; /* Match darker cream */
+  background-color: #3e2f2f; /* Match body dark brown */
   padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -23,6 +23,7 @@ body {
 .brand {
   font-size: 24px;
   font-weight: bold;
+  color: #f5f5dc; /* Light cream brand text */
 }
 
 /* Navigation */
@@ -38,23 +39,24 @@ body {
   font-size: 16px;
   position: relative;
   padding: 5px 10px;
+  color: #f5f5dc; /* Light cream nav text */
 }
 
 /* Dropdown Menu */
 .dropdown-menu {
   display: none;
   position: absolute;
-  background-color: #f5e1c0; /* Darker cream for dropdowns too */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #5c4033; /* Dark brown for dropdowns */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 150px;
+  min-width: 160px;
   z-index: 1000;
 }
 
 .dropdown-menu li {
-  border-bottom: 1px solid #e0cfa8;
+  border-bottom: 1px solid #7a5a48;
 }
 
 .dropdown-menu li:last-child {
@@ -63,13 +65,13 @@ body {
 
 .dropdown-menu a {
   text-decoration: none;
-  color: #333;
+  color: #f5f5dc; /* Cream text */
   display: block;
   padding: 8px 12px;
 }
 
 .dropdown-menu a:hover {
-  background-color: #e8cfa2; /* Slightly darker on hover */
+  background-color: #8b6d5c; /* Slightly lighter on hover */
 }
 
 /* Show dropdown */
@@ -83,6 +85,7 @@ body {
   margin: 80px auto;
   padding: 20px;
   text-align: center;
+  color: #f5f5dc; /* Cream text on dark background */
 }
 
 .home-content h1 {
@@ -94,4 +97,3 @@ body {
   font-size: 18px;
   line-height: 1.6;
 }
-
