@@ -10,16 +10,16 @@ body {
 
 /* === Headings === */
 h1 {
-  color: #0000FF; /* blue */
+  color: #1f4fd8; /* blue */
   text-align: center;
 }
 h2 {
-  color: #e67e22;
+  color: #1f4fd8;
   border-bottom: 2px solid #e67e22;
   padding-bottom: 5px;
 }
 h3 {
-  color: #f39c12;
+  color: #1f4fd8;
 }
 
 
