@@ -3,51 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>One Big Family Recipes</title>
-  <link rel="stylesheet" href="styles.css?v=7">
   <style>
-    /* Quick CSS so you can see dropdowns */
+    /* BODY AND HEADER */
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #F5F5DC; /* cream */
+      font-family: sans-serif;
+      background-color: #2776FF; /* Dark blue background */
+      color: white;
     }
     .site-header {
-      background-color: #2776FF; /* your preferred dark blue */
-      color: white;
-      padding: 1rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #2776FF;
       flex-wrap: wrap;
     }
+    .brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    /* NAVBAR AND DROPDOWNS */
     .nav {
       display: flex;
       gap: 1rem;
+      position: relative;
       flex-wrap: wrap;
+    }
+    .dropdown {
+      position: relative;
     }
     .dropbtn {
       background: none;
       border: none;
       color: white;
-      font-size: 1rem;
       cursor: pointer;
-      position: relative;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
     }
     .dropdown-menu {
       display: none;
       position: absolute;
+      top: 100%;
+      left: 0;
       background-color: white;
       color: black;
-      min-width: 160px;
-      padding: 0.5rem 0;
-      margin: 0;
       list-style: none;
-      z-index: 100;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .dropdown-menu li {
       padding: 0;
+      margin: 0;
+      min-width: 160px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 100;
     }
     .dropdown-menu li a {
       display: block;
@@ -61,19 +68,38 @@
     .show {
       display: block;
     }
+
+    /* MAIN CONTENT */
     .home-content {
       text-align: center;
-      padding: 2rem;
+      padding: 5rem 2rem;
+      background-color: #F5F5DC; /* cream for main content */
+      color: black;
+      min-height: calc(100vh - 70px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .home-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .home-content p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0.5rem auto;
     }
   </style>
 </head>
 <body>
+
   <header class="site-header">
     <div class="brand">One Big Family Recipes</div>
     <nav class="nav">
-      <!-- Asia -->
+      <!-- Dropdown Example: Asia -->
       <div class="dropdown">
-        <button class="nav-link dropbtn" id="asiaBtn">Asia ▾</button>
+        <button class="dropbtn" id="asiaBtn">Asia ▾</button>
         <ul class="dropdown-menu" id="asiaMenu">
           <li><a href="asia/afghanistan/">Afghanistan</a></li>
           <li><a href="asia/china/">China</a></li>
@@ -83,49 +109,22 @@
         </ul>
       </div>
 
-      <!-- Europe -->
+      <!-- Dropdown Example: Europe -->
       <div class="dropdown">
-        <button class="nav-link dropbtn" id="euBtn">Europe ▾</button>
+        <button class="dropbtn" id="euBtn">Europe ▾</button>
         <ul class="dropdown-menu" id="euMenu">
           <li><a href="europe/france/">France</a></li>
           <li><a href="europe/italy/">Italy</a></li>
         </ul>
       </div>
 
-      <!-- North America -->
+      <!-- Dropdown Example: North America -->
       <div class="dropdown">
-        <button class="nav-link dropbtn" id="naBtn">North America ▾</button>
+        <button class="dropbtn" id="naBtn">North America ▾</button>
         <ul class="dropdown-menu" id="naMenu">
           <li><a href="north-america/usa/">United States</a></li>
           <li><a href="north-america/canada/">Canada</a></li>
           <li><a href="north-america/mexico/">Mexico</a></li>
-        </ul>
-      </div>
-
-      <!-- South America -->
-      <div class="dropdown">
-        <button class="nav-link dropbtn" id="saBtn">South America ▾</button>
-        <ul class="dropdown-menu" id="saMenu">
-          <li><a href="south-america/brazil/">Brazil</a></li>
-          <li><a href="south-america/argentina/">Argentina</a></li>
-        </ul>
-      </div>
-
-      <!-- Oceania -->
-      <div class="dropdown">
-        <button class="nav-link dropbtn" id="oceaniaBtn">Oceania ▾</button>
-        <ul class="dropdown-menu" id="oceaniaMenu">
-          <li><a href="oceania/australia/">Australia</a></li>
-          <li><a href="oceania/new-zealand/">New Zealand</a></li>
-        </ul>
-      </div>
-
-      <!-- Africa -->
-      <div class="dropdown">
-        <button class="nav-link dropbtn" id="africaBtn">Africa ▾</button>
-        <ul class="dropdown-menu" id="africaMenu">
-          <li><a href="africa/egypt/">Egypt</a></li>
-          <li><a href="africa/south-africa/">South Africa</a></li>
         </ul>
       </div>
     </nav>
@@ -144,25 +143,28 @@
 
   <script>
     // Dropdown functionality
-    const dropdowns = document.querySelectorAll(".dropdown");
+    const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(drop => {
-      const btn = drop.querySelector(".dropbtn");
-      const menu = drop.querySelector(".dropdown-menu");
+      const btn = drop.querySelector('.dropbtn');
+      const menu = drop.querySelector('.dropdown-menu');
 
-      btn.addEventListener("click", (e) => {
+      btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        // Close all other menus
-        document.querySelectorAll(".dropdown-menu").forEach(m => {
-          if (m !== menu) m.classList.remove("show");
+        // Close other dropdowns
+        document.querySelectorAll('.dropdown-menu').forEach(m => {
+          if (m !== menu) m.classList.remove('show');
         });
-        menu.classList.toggle("show");
+        menu.classList.toggle('show');
       });
     });
 
-    document.addEventListener("click", () => {
-      document.querySelectorAll(".dropdown-menu").forEach(menu => menu.classList.remove("show"));
+    // Close dropdowns if clicked outside
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
     });
   </script>
+
 </body>
 </html>
+
