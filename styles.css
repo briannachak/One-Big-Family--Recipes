@@ -105,11 +105,47 @@ body > h1 + p, body > h2, body > ul, body > ol {
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   padding: 8px;
   min-width: 160px;
+/* Dropdown */
+.dropdown {
+  position: relative;
 }
 
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;              /* align under Asia */
+  top: 100%;            /* directly under the link */
+  margin-top: 8px;      /* small spacing, no gap issue */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  padding: 8px;
+  min-width: 160px;
+  z-index: 9999;        /* keep it above everything */
+}
+
+/* Show menu when hovering over the whole LI */
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+
+/* Make the trigger easier to hover */
+.nav-item.dropdown {
+  padding-bottom: 10px; /* “hover buffer” so it doesn’t disappear */
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #333;
+}
+
+.dropdown-link:hover {
+  background: rgba(31,79,216,0.10);
+  text-decoration: none;
+}
+
 
 .dropdown-link {
   display: block;
