@@ -3,54 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>One Big Family Recipes</title>
-  <link rel="stylesheet" href="styles.css?v=4">
+  <link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
   <header class="site-header">
     <div class="brand">One Big Family Recipes</div>
     <nav class="nav">
-      <button class="nav-link dropbtn" type="button" id="asiaBtn" aria-expanded="false">Asia ▾</button>
+      <!-- Asia -->
+      <button class="nav-link dropbtn" id="asiaBtn" aria-expanded="false">Asia ▾</button>
       <ul class="dropdown-menu" id="asiaMenu">
-        <li><a class="dropdown-link" href="asia/afghanistan/">Afghanistan</a></li>
-        <li><a class="dropdown-link" href="asia/china/">China</a></li>
-        <li><a class="dropdown-link" href="asia/india/">India</a></li>
-        <li><a class="dropdown-link" href="asia/japan/">Japan</a></li>
-        <li><a class="dropdown-link" href="asia/thailand/">Thailand</a></li>
-        <!-- Add the rest of Asia countries here -->
+        <li><a href="asia/afghanistan/">Afghanistan</a></li>
+        <li><a href="asia/china/">China</a></li>
+        <li><a href="asia/india/">India</a></li>
+        <li><a href="asia/japan/">Japan</a></li>
+        <li><a href="asia/thailand/">Thailand</a></li>
+        <!-- Add remaining Asia countries here -->
       </ul>
 
-      <button class="nav-link dropbtn" type="button" id="euBtn" aria-expanded="false">Europe ▾</button>
+      <!-- Europe -->
+      <button class="nav-link dropbtn" id="euBtn" aria-expanded="false">Europe ▾</button>
       <ul class="dropdown-menu" id="euMenu">
-        <li><a class="dropdown-link" href="europe/france/">France</a></li>
-        <li><a class="dropdown-link" href="europe/italy/">Italy</a></li>
-        <!-- Add the rest of Europe countries here -->
+        <li><a href="europe/france/">France</a></li>
+        <li><a href="europe/italy/">Italy</a></li>
+        <!-- Add remaining Europe countries here -->
       </ul>
 
-      <button class="nav-link dropbtn" type="button" id="naBtn" aria-expanded="false">North America ▾</button>
+      <!-- North America -->
+      <button class="nav-link dropbtn" id="naBtn" aria-expanded="false">North America ▾</button>
       <ul class="dropdown-menu" id="naMenu">
-        <li><a class="dropdown-link" href="north-america/usa/">United States</a></li>
-        <li><a class="dropdown-link" href="north-america/canada/">Canada</a></li>
-        <!-- Add the rest of North America countries here -->
+        <li><a href="north-america/usa/">United States</a></li>
+        <li><a href="north-america/canada/">Canada</a></li>
+        <li><a href="north-america/mexico/">Mexico</a></li>
       </ul>
 
-      <button class="nav-link dropbtn" type="button" id="saBtn" aria-expanded="false">South America ▾</button>
+      <!-- South America -->
+      <button class="nav-link dropbtn" id="saBtn" aria-expanded="false">South America ▾</button>
       <ul class="dropdown-menu" id="saMenu">
-        <li><a class="dropdown-link" href="south-america/brazil/">Brazil</a></li>
-        <li><a class="dropdown-link" href="south-america/argentina/">Argentina</a></li>
-        <!-- Add the rest of South America countries here -->
+        <li><a href="south-america/brazil/">Brazil</a></li>
+        <li><a href="south-america/argentina/">Argentina</a></li>
+        <!-- Add remaining South America countries here -->
       </ul>
 
-      <button class="nav-link dropbtn" type="button" id="oceaniaBtn" aria-expanded="false">Oceania ▾</button>
+      <!-- Oceania -->
+      <button class="nav-link dropbtn" id="oceaniaBtn" aria-expanded="false">Oceania ▾</button>
       <ul class="dropdown-menu" id="oceaniaMenu">
-        <li><a class="dropdown-link" href="oceania/australia/">Australia</a></li>
-        <li><a class="dropdown-link" href="oceania/new-zealand/">New Zealand</a></li>
+        <li><a href="oceania/australia/">Australia</a></li>
+        <li><a href="oceania/new-zealand/">New Zealand</a></li>
       </ul>
 
-      <button class="nav-link dropbtn" type="button" id="africaBtn" aria-expanded="false">Africa ▾</button>
+      <!-- Africa -->
+      <button class="nav-link dropbtn" id="africaBtn" aria-expanded="false">Africa ▾</button>
       <ul class="dropdown-menu" id="africaMenu">
-        <li><a class="dropdown-link" href="africa/egypt/">Egypt</a></li>
-        <li><a class="dropdown-link" href="africa/south-africa/">South Africa</a></li>
-        <!-- Add the rest of Africa countries here -->
+        <li><a href="africa/egypt/">Egypt</a></li>
+        <li><a href="africa/south-africa/">South Africa</a></li>
+        <!-- Add remaining Africa countries here -->
       </ul>
     </nav>
   </header>
@@ -67,28 +73,29 @@
   </main>
 
   <script>
-    function setupDropdown(buttonId, menuId) {
-      const btn = document.getElementById(buttonId);
-      const menu = document.getElementById(menuId);
+    const buttons = document.querySelectorAll(".dropbtn");
+    const menus = document.querySelectorAll(".dropdown-menu");
 
+    buttons.forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        const isOpen = menu.classList.toggle("show");
-        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      });
 
-      document.addEventListener("click", () => {
-        menu.classList.remove("show");
-        btn.setAttribute("aria-expanded", "false");
-      });
-    }
+        // Close all other menus
+        menus.forEach(menu => menu.classList.remove("show"));
+        buttons.forEach(b => b.setAttribute("aria-expanded", "false"));
 
-    setupDropdown("asiaBtn", "asiaMenu");
-    setupDropdown("euBtn", "euMenu");
-    setupDropdown("naBtn", "naMenu");
-    setupDropdown("saBtn", "saMenu");
-    setupDropdown("oceaniaBtn", "oceaniaMenu");
-    setupDropdown("africaBtn", "africaMenu");
+        // Open the clicked menu
+        const menuId = btn.id.replace("Btn", "Menu");
+        const menu = document.getElementById(menuId);
+        menu.classList.add("show");
+        btn.setAttribute("aria-expanded", "true");
+      });
+    });
+
+    document.addEventListener("click", () => {
+      menus.forEach(menu => menu.classList.remove("show"));
+      buttons.forEach(btn => btn.setAttribute("aria-expanded", "false"));
+    });
   </script>
 </body>
 </html>
