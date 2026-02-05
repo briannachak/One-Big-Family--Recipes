@@ -110,6 +110,11 @@ body {
   opacity: 0.8;
 }
 
+/* Path for your image file in the root of the repo */
+.earth-img {
+  content: url('earth.png'); /* This ensures it picks the root image */
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .nav-link {
@@ -123,3 +128,4 @@ body {
     width: 100px;
   }
 }
+
