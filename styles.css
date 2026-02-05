@@ -10,7 +10,7 @@ body {
 
 /* === Headings === */
 h1 {
-  color: #d35400; /* burnt orange */
+  color: #0000FF; /* blue */
   text-align: center;
 }
 h2 {
@@ -44,4 +44,11 @@ li {
 /* === Recipe Box Styling === */
 body > h1 + p, body > h2, body > ul, body > ol {
   margin-top: 20px;
+}
+.recipe-section {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
