@@ -1,58 +1,4 @@
-/* === Global Styles === */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fff8f0; /* soft cream background */
-  color: #333;
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* === Headings === */
-h1 {
-  color: #1f4fd8; /* blue */
-  text-align: center;
-}
-h2 {
-  color: #1f4fd8;
-  border-bottom: 2px solid #e67e22;
-  padding-bottom: 5px;
-}
-h3 {
-  color: #1f4fd8;
-}
-
-
-/* === Links === */
-a {
-  color: #2980b9;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* === Lists === */
-ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-li {
-  margin-bottom: 5px;
-}
-
-/* === Recipe Box Styling === */
-body > h1 + p, body > h2, body > ul, body > ol {
-  margin-top: 20px;
-}
-.recipe-section {
-  background: white;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-/* === Header / Nav === */
+/* Header */
 .site-header {
   display: flex;
   align-items: center;
@@ -70,12 +16,14 @@ body > h1 + p, body > h2, body > ul, body > ol {
   color: #1f4fd8;
 }
 
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 14px;
+.nav {
+  position: relative;
+}
+
+.dropbtn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -90,130 +38,21 @@ body > h1 + p, body > h2, body > ul, body > ol {
   text-decoration: none;
 }
 
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
+/* Click dropdown */
 .dropdown-menu {
   display: none;
   position: absolute;
   right: 0;
-  top: 38px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  padding: 8px;
-  min-width: 160px;
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  left: 0;              /* align under Asia */
-  top: 100%;            /* directly under the link */
-  margin-top: 8px;      /* small spacing, no gap issue */
+  top: 44px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   padding: 8px;
   min-width: 160px;
-  z-index: 9999;        /* keep it above everything */
+  z-index: 9999;
 }
 
-/* Show menu when hovering over the whole LI */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* Make the trigger easier to hover */
-.nav-item.dropdown {
-  padding-bottom: 10px; /* “hover buffer” so it doesn’t disappear */
-}
-
-.dropdown-link {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  color: #333;
-}
-
-.dropdown-link:hover {
-  background: rgba(31,79,216,0.10);
-  text-decoration: none;
-}
-
-
-.dropdown-link {
-  display: block;
-  padding: 10px 12px;
-  border-radius: 10px;
-  color: #333;
-}
-
-.dropdown-link:hover {
-  background: rgba(31,79,216,0.10);
-  text-decoration: none;
-}
-/* === Header / Nav === */
-.site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 18px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  margin-bottom: 24px;
-}
-
-.brand {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #1f4fd8;
-}
-
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 14px;
-}
-
-.nav-link {
-  color: #1f4fd8;
-  font-weight: 600;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-
-.nav-link:hover {
-  background: rgba(31,79,216,0.10);
-  text-decoration: none;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 38px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  padding: 8px;
-  min-width: 160px;
-}
-
-.dropdown:hover .dropdown-menu {
+.dropdown-menu.show {
   display: block;
 }
 
@@ -227,6 +66,10 @@ body > h1 + p, body > h2, body > ul, body > ol {
 .dropdown-link:hover {
   background: rgba(31,79,216,0.10);
   text-decoration: none;
+}
+
+main {
+  margin-top: 10px;
 }
 
 
