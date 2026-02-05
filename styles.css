@@ -70,14 +70,14 @@ body {
   padding: 0;
   position: absolute; /* positions relative to parent .dropdown */
   top: 100%;           /* directly under the button */
-  left: 0;             /* align left edge of menu with button */
+  left: 0;             /* align left edge with button */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   min-width: 180px;
   text-align: left;
   z-index: 100;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional shadow */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
 }
 
 /* Dropdown links */
@@ -141,5 +141,6 @@ body {
     width: 100px;
   }
 }
+
 
 
