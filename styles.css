@@ -14,11 +14,11 @@ a {
 
 /* ===== Header & Nav ===== */
 .site-header {
-  background-color: #1976d2; /* blue header */
+  background-color: #0077cc; /* blue header */
   padding: 10px 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column; /* stack brand and nav */
+  align-items: center; /* center everything */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,22 +28,20 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
+  margin-bottom: 10px;
 }
 
 /* ===== Dropdown Container ===== */
 .nav {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* allows wrapping on small screens */
-}
-
-.dropdown {
-  position: relative;
+  flex-wrap: wrap; /* wrap on smaller screens */
+  justify-content: center; /* center the continents */
 }
 
 /* ===== Dropdown Buttons ===== */
 .dropbtn {
-  background-color: #1976d2; /* match header */
+  background-color: #0077cc;
   color: white;
   padding: 8px 12px;
   font-size: 1rem;
@@ -52,12 +50,13 @@ a {
   border-radius: 4px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: space-between;
+  width: auto;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #1565c0;
+  background-color: #005fa3;
 }
 
 /* ===== Dropdown Menu ===== */
@@ -65,7 +64,7 @@ a {
   display: none; /* hide by default */
   position: absolute;
   background-color: white;
-  min-width: 220px;
+  min-width: 200px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 6px;
   overflow-y: auto;
@@ -73,7 +72,6 @@ a {
   z-index: 1000;
   margin-top: 5px;
   padding: 5px 0;
-  left: 0; /* ensure aligned under button */
 }
 
 /* Show class from JS */
@@ -93,14 +91,13 @@ a {
   transition: background-color 0.2s ease;
 }
 
-/* Flags styling */
-.dropdown-link .flag {
-  font-size: 1.1rem; /* slightly bigger for desktop */
-}
-
-/* Hover effect */
 .dropdown-link:hover {
   background-color: #f0f0f0;
+}
+
+/* Flag styling */
+.flag {
+  font-size: 1em; /* desktop size */
 }
 
 /* ===== Optional Scrollbar Styling ===== */
@@ -129,23 +126,18 @@ a {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .dropdown-menu {
-    min-width: 180px;
-    max-height: 250px;
-  }
-}
-
 @media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
   .nav {
     flex-direction: column;
+    width: 100%;
     gap: 5px;
-    align-items: stretch;
+    align-items: center;
   }
 
   .dropbtn {
@@ -154,8 +146,16 @@ a {
   }
 
   .dropdown-menu {
-    position: relative;
-    margin-top: 0;
+    min-width: 90%; /* almost full width on mobile */
+    max-height: 250px;
+    box-sizing: border-box;
+  }
+
+  .dropdown-link {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-link .flag {
+    font-size: 0.9em;
   }
 }
-
