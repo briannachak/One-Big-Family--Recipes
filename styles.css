@@ -14,11 +14,12 @@ a {
 
 /* ===== Header & Nav ===== */
 .site-header {
-  background-color: #2196f3; /* Blue header */
+  background-color: #2196F3; /* blue header */
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* centers nav horizontally */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,48 +29,47 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-}
-
-/* ===== Navigation Container ===== */
-.nav {
-  display: flex;
-  gap: 10px;
-  justify-content: center; /* Center continents */
-  flex-wrap: wrap; /* Wrap if too many for one line */
+  margin-right: 20px; /* space between brand and nav */
 }
 
 /* ===== Dropdown Container ===== */
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap; /* wrap on mobile */
+  justify-content: center;
+}
+
 .dropdown {
   position: relative;
 }
 
 /* ===== Dropdown Buttons ===== */
 .dropbtn {
-  background-color: #2196f3;
+  background-color: #2196F3;
   color: white;
   padding: 8px 12px;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  white-space: nowrap;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #1976d2;
+  background-color: #1976D2;
 }
 
 /* ===== Dropdown Menu ===== */
 .dropdown-menu {
-  display: none;
+  display: none; /* hide by default */
   position: absolute;
   background-color: white;
-  min-width: 220px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 6px;
   overflow-y: auto;
-  max-height: 300px;
+  max-height: 300px; /* scrollable for long lists */
   z-index: 1000;
   margin-top: 5px;
   padding: 5px 0;
@@ -82,9 +82,7 @@ a {
 
 /* ===== Dropdown Links ===== */
 .dropdown-link {
-  display: flex;
-  align-items: center;
-  gap: 8px; /* Space between flag and text */
+  display: block;
   padding: 6px 12px;
   color: #333;
   font-size: 0.95rem;
@@ -96,16 +94,7 @@ a {
   background-color: #f0f0f0;
 }
 
-/* ===== Flag Images in Dropdown ===== */
-.dropdown-link img {
-  width: 20px;
-  height: 15px;
-  object-fit: cover;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-}
-
-/* ===== Scrollbar Styling ===== */
+/* ===== Optional Scrollbar Styling ===== */
 .dropdown-menu::-webkit-scrollbar {
   width: 6px;
 }
@@ -131,21 +120,16 @@ a {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .nav {
-    justify-content: center; /* Keep centered on medium screens */
-  }
-}
-
 @media (max-width: 768px) {
   .nav {
     flex-direction: column;
     gap: 5px;
-    align-items: center; /* Center stack on mobile */
   }
 
   .dropdown-menu {
     min-width: 150px;
     max-height: 250px;
+    position: static; /* keeps menu below button on mobile */
+    margin-top: 0;
   }
 }
