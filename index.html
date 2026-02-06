@@ -275,6 +275,35 @@
     Click a continent above to start exploring recipes and discover flavors from around the globe.
   </p>
 </main>
+<script>
+  // Select all dropdown buttons
+  const dropdowns = document.querySelectorAll('.dropbtn');
+
+  dropdowns.forEach(button => {
+    button.addEventListener('click', () => {
+      // Get the menu next to this button
+      const menu = button.nextElementSibling;
+
+      // Toggle menu display
+      if (menu.style.display === 'block') {
+        menu.style.display = 'none';
+      } else {
+        // Hide all other menus first
+        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+        menu.style.display = 'block';
+      }
+    });
+  });
+
+  // Close menus when clicking outside
+  window.addEventListener('click', (e) => {
+    if (!e.target.matches('.dropbtn')) {
+      document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.style.display = 'none';
+      });
+    }
+  });
+</script>
 
 
 </body>
