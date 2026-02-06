@@ -14,11 +14,11 @@ a {
 
 /* ===== Header & Nav ===== */
 .site-header {
-  background-color: #0077cc; /* blue header */
+  background-color: #2196f3; /* Blue header */
   padding: 10px 20px;
   display: flex;
-  flex-direction: column; /* stack brand and nav */
-  align-items: center; /* center everything */
+  align-items: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -28,47 +28,48 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 10px;
 }
 
-/* ===== Dropdown Container ===== */
+/* ===== Navigation Container ===== */
 .nav {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* wrap on smaller screens */
-  justify-content: center; /* center the continents */
+  justify-content: center; /* Center continents */
+  flex-wrap: wrap; /* Wrap if too many for one line */
+}
+
+/* ===== Dropdown Container ===== */
+.dropdown {
+  position: relative;
 }
 
 /* ===== Dropdown Buttons ===== */
 .dropbtn {
-  background-color: #0077cc;
+  background-color: #2196f3;
   color: white;
   padding: 8px 12px;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: auto;
+  white-space: nowrap;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #005fa3;
+  background-color: #1976d2;
 }
 
 /* ===== Dropdown Menu ===== */
 .dropdown-menu {
-  display: none; /* hide by default */
+  display: none;
   position: absolute;
   background-color: white;
-  min-width: 200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 220px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   border-radius: 6px;
   overflow-y: auto;
-  max-height: 300px; /* scrollable for long lists */
+  max-height: 300px;
   z-index: 1000;
   margin-top: 5px;
   padding: 5px 0;
@@ -83,7 +84,7 @@ a {
 .dropdown-link {
   display: flex;
   align-items: center;
-  gap: 6px; /* space between flag and text */
+  gap: 8px; /* Space between flag and text */
   padding: 6px 12px;
   color: #333;
   font-size: 0.95rem;
@@ -95,12 +96,16 @@ a {
   background-color: #f0f0f0;
 }
 
-/* Flag styling */
-.flag {
-  font-size: 1em; /* desktop size */
+/* ===== Flag Images in Dropdown ===== */
+.dropdown-link img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  border-radius: 2px;
 }
 
-/* ===== Optional Scrollbar Styling ===== */
+/* ===== Scrollbar Styling ===== */
 .dropdown-menu::-webkit-scrollbar {
   width: 6px;
 }
@@ -126,36 +131,21 @@ a {
 }
 
 /* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+@media (max-width: 1024px) {
+  .nav {
+    justify-content: center; /* Keep centered on medium screens */
   }
+}
 
+@media (max-width: 768px) {
   .nav {
     flex-direction: column;
-    width: 100%;
     gap: 5px;
-    align-items: center;
-  }
-
-  .dropbtn {
-    width: 100%;
-    justify-content: space-between;
+    align-items: center; /* Center stack on mobile */
   }
 
   .dropdown-menu {
-    min-width: 90%; /* almost full width on mobile */
+    min-width: 150px;
     max-height: 250px;
-    box-sizing: border-box;
-  }
-
-  .dropdown-link {
-    font-size: 0.9rem;
-  }
-
-  .dropdown-link .flag {
-    font-size: 0.9em;
   }
 }
