@@ -60,23 +60,26 @@ body {
   background-color: #1d55c1;
 }
 
-/* ===== Dropdown Menus ===== */
+/* ===== Dropdown Menus (Updated for long lists) ===== */
 .dropdown-menu {
-  list-style: none;
-  display: none;
-  position: absolute;
-  top: 100%; /* below the button */
-  left: 0;   /* align left edge of menu to button */
-  margin-top: 5px;
+  list-style-type: none;
+  display: none; /* hidden by default */
+  margin: 5px 0;
   padding: 0;
-  min-width: 180px;
+  position: absolute; /* positions relative to parent .dropdown */
+  top: 100%;           /* directly under the button */
+  left: 0;             /* align left edge with button */
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
+  min-width: 180px;
+  max-height: 300px; /* limit height */
+  overflow-y: auto;  /* add vertical scrollbar if too tall */
   text-align: left;
   z-index: 100;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
 }
+
 
 .dropdown-menu li {
   padding: 5px 10px;
