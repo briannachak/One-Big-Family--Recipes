@@ -14,12 +14,12 @@ a {
 
 /* ===== Header & Nav ===== */
 .site-header {
-  background-color: #2196F3; /* blue header */
+  background-color: #2196f3; /* blue header like before */
   padding: 10px 20px;
   display: flex;
   align-items: center;
-  justify-content: center; /* centers nav horizontally */
-  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  justify-content: center; /* center everything horizontally */
+  gap: 20px; /* spacing between brand and nav */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -29,24 +29,24 @@ a {
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
-  margin-right: 20px; /* space between brand and nav */
 }
 
-/* ===== Dropdown Container ===== */
+/* ===== Navigation ===== */
 .nav {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap; /* wrap on mobile */
-  justify-content: center;
+  flex-wrap: wrap; /* wrap if screen too small */
+  justify-content: center; /* keep centered */
 }
 
+/* ===== Dropdown ===== */
 .dropdown {
   position: relative;
 }
 
 /* ===== Dropdown Buttons ===== */
 .dropbtn {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
   padding: 8px 12px;
   font-size: 1rem;
@@ -57,25 +57,27 @@ a {
 
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: #1976D2;
+  background-color: #1976d2;
 }
 
 /* ===== Dropdown Menu ===== */
 .dropdown-menu {
-  display: none; /* hide by default */
+  display: none;
   position: absolute;
   background-color: white;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 6px;
   overflow-y: auto;
-  max-height: 300px; /* scrollable for long lists */
+  max-height: 300px;
   z-index: 1000;
   margin-top: 5px;
   padding: 5px 0;
+  left: 50%;
+  transform: translateX(-50%); /* center dropdown under button */
 }
 
-/* Show class from JS */
+/* Show dropdown */
 .dropdown-menu.show {
   display: block;
 }
@@ -108,7 +110,7 @@ a {
   background-color: transparent;
 }
 
-/* ===== Main Content Styling ===== */
+/* ===== Main Content ===== */
 .home-content {
   text-align: center;
   padding: 40px 20px;
@@ -129,8 +131,12 @@ a {
   .dropdown-menu {
     min-width: 150px;
     max-height: 250px;
-    position: static; /* keeps menu below button on mobile */
-    margin-top: 0;
+    left: 0;
+    transform: none; /* no centering on small screens */
+  }
+
+  .dropbtn {
+    width: 100%; /* full width buttons on mobile */
+    text-align: center;
   }
 }
-
